@@ -47,10 +47,13 @@ if len(s) == 0:
 		s = soup.find_all("div", {"class": "answer accepted-answer"})
 		
 		if len(s) == 0:
-			s = soup.find_all("div", {"class": "answer"})[0]
-			tdTags = s.find_all("div", {"class": "post-text"})
-			for tag in tdTags:
-				print(tag.text)
+			try:
+				s = soup.find_all("div", {"class": "answer"})[0]
+				tdTags = s.find_all("div", {"class": "post-text"})
+				for tag in tdTags:
+					print(tag.text)
+			except:
+				print("i dont know :(")
 				
 		else:
 			for tag in s:
