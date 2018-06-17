@@ -1,3 +1,3 @@
 example:
 
-$python ask.py how to concatenate strings in python
+$ python ask.py how to concatenate strings in python
