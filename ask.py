@@ -5,7 +5,7 @@ from bs4 import BeautifulSoup
 
 #print("https://stackoverflow.com/search?q=" + "+".join(sys.argv[1:]))
 
-r = requests.get("https://stackoverflow.com/search?tab=votes&q=" + "+".join(sys.argv[1:]))
+r = requests.get("https://stackoverflow.com/search?tab=votes&q=" + str(sys.argv[1]).replace("\"", ""))
 soup = BeautifulSoup(r.text, "lxml")
 
 s = soup.findAll('a', href=re.compile("^/questions/"))
