@@ -1,0 +1,6 @@
+
+Integer.toString calls the static method in the class Integer. It does not need an instance of Integer.
+If you call new Integer(i) you create an instance of type Integer, which is a full Java object encapsulating the value of your int. Then you call the toString method on it to ask it to return a string representation of itself.
+If all you want is to print an int, you'd use the first one because it's lighter, faster and doesn't use extra memory (aside from the returned string).  
+If you want an object representing an integer value—to put it inside a collection for example—you'd use the second one, since it gives you a full-fledged object to do all sort of things that you cannot do with a bare int.
+
