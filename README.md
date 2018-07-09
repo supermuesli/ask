@@ -2,6 +2,7 @@ required modules:
 - requests
 - re
 - beautifulsoup4
+- lxml
 
 use like this:
 
